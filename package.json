@@ -1,18 +1,32 @@
 {
   "name": "todo-app",
   "version": "1.0.0",
+  "type": "module",
   "description": "Simple todo application with Node.js, Express, and SQLite",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
-  "keywords": ["todo", "express", "sqlite"],
+  "keywords": [
+    "todo",
+    "express",
+    "sqlite"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
     "better-sqlite3": "^9.2.2",
-    "ejs": "^3.1.9"
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^4.0.16",
+    "supertest": "^7.2.2",
+    "vitest": "^4.0.16"
   }
 }

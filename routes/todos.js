@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
+import { getAllTodos, createTodo, updateTodo, deleteTodo, getTodoById } from '../db.js';
+
 const router = express.Router();
-const { getAllTodos, createTodo, updateTodo, deleteTodo, getTodoById } = require('../db');
 
 // 全てのtodoを取得
 router.get('/', (req, res) => {
@@ -73,4 +74,4 @@ router.delete('/:id', (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
